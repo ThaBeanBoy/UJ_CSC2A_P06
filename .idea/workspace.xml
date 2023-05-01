@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="201da627-73f2-4e36-849c-ae32ef98d36e" name="Changes" comment="" />
+    <list default="true" id="201da627-73f2-4e36-849c-ae32ef98d36e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/planets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/spaceships.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/p06.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p06.iml" beforeDir="false" afterPath="$PROJECT_DIR$/p06.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PBxScfgy5v8gRcCWq8sbHewDYi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,13 +26,25 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/TG Chipoyera/Documents/UJ/CSC2A/javafx-17/lib/javafx.web.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TG Chipoyera\Documents\UJ\CSC2A\p06" />
+      <recent name="C:\Users\TG Chipoyera\Documents\UJ\CSC2A\p06\data" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="p06" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\TG Chipoyera\Documents\UJ\CSC2A\javafx-17\lib&quot; --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
