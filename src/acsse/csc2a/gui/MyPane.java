@@ -10,6 +10,9 @@ import javafx.scene.control.MenuBar;
 
 import acsse.csc2a.gui.MyCanvas;
 
+import acsse.csc2a.file.FileIO;
+
+import java.io.File;
 import java.util.ArrayList;
 
 public class MyPane extends StackPane {
@@ -32,10 +35,10 @@ public class MyPane extends StackPane {
         fileMenu.getItems().add(SpaceShipsMenuItem);
 
         // Binding event listener to open planets' file
-        PlanetMenuItem.setOnAction(e->{});
+        PlanetMenuItem.setOnAction(e-> this.Planets = FileIO.readPlanet(new File("data/planets.txt")));
 
         // Binding event listener to open spaceships' file
-        SpaceShipsMenuItem.setOnAction(e->{});
+        SpaceShipsMenuItem.setOnAction(e-> this.SpaceShips = FileIO.readSpaceShip(new File("data/spaceships.txt")));
 
         // Making the canvas
         final MyCanvas Canvas = new MyCanvas();

@@ -1,9 +1,11 @@
 package acsse.csc2a.model;
 
+import acsse.csc2a.gui.IDrawVisitor;
+import acsse.csc2a.gui.IDrawable;
 import acsse.csc2a.model.Ship;
 import javafx.geometry.Point2D;
 
-public class SpaceShip extends Ship{
+public class SpaceShip extends Ship implements IDrawable {
     private final Point2D shipPosition;
     /**
      * Constructor for SpaceShip class
@@ -17,4 +19,9 @@ public class SpaceShip extends Ship{
     }
 
     public Point2D getShipPosition(){return this.shipPosition;}
+
+    @Override
+    public void accept(IDrawVisitor visitor) {
+        visitor.draw(this);
+    }
 }

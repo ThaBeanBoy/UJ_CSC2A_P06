@@ -1,9 +1,11 @@
 package acsse.csc2a.model;
 
+import acsse.csc2a.gui.IDrawVisitor;
+import acsse.csc2a.gui.IDrawable;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 
-public class Planet {
+public class Planet implements IDrawable {
     private final String name;
     private final Point2D planetPosition;
     private final Color planetColor;
@@ -23,4 +25,9 @@ public class Planet {
     public Color getPlanetColor() { return this.planetColor;}
 
     public int getRadius(){return this.radius;}
+
+    @Override
+    public void accept(IDrawVisitor visitor) {
+        visitor.draw(this);
+    }
 }
