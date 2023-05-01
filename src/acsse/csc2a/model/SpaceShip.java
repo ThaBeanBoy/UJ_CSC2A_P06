@@ -4,6 +4,7 @@ import acsse.csc2a.gui.IDrawVisitor;
 import acsse.csc2a.gui.IDrawable;
 import acsse.csc2a.model.Ship;
 import javafx.geometry.Point2D;
+import javafx.scene.canvas.GraphicsContext;
 
 public class SpaceShip extends Ship implements IDrawable {
     private final Point2D shipPosition;
@@ -21,7 +22,7 @@ public class SpaceShip extends Ship implements IDrawable {
     public Point2D getShipPosition(){return this.shipPosition;}
 
     @Override
-    public void accept(IDrawVisitor visitor) {
-        visitor.draw(this);
+    public void accept(IDrawVisitor visitor, GraphicsContext gc) {
+        visitor.draw(this, gc);
     }
 }

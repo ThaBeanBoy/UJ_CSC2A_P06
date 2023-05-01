@@ -22,8 +22,8 @@ public class FileIO {
                 double y_position = Double.parseDouble(spaceProperties[1]);
                 String ID = spaceProperties[2];
                 StringBuilder ShipName = new StringBuilder(spaceProperties[3]);
-                for(int i=3; i<spaceProperties.length; i++)
-                    ShipName.append(spaceProperties[i]);
+                for(int i=4; i<spaceProperties.length; i++)
+                    ShipName.append(" ").append(spaceProperties[i]);
 
                 //Ading spaceship to the array
                 spaceShips.add(new SpaceShip(ID, ShipName.toString(), x_position, y_position));

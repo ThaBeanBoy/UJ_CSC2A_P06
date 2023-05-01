@@ -10,19 +10,17 @@ import acsse.csc2a.model.SpaceShip;
 import java.util.ArrayList;
 
 public class MyCanvas extends Canvas {
-    public final static int canvasWidth = 800;
-    public final static int canvasHeight = 400;
+    public final static int canvasWidth = 1500;
+    public final static int canvasHeight = 500;
 
-    private ArrayList<Planet> Planets;
-    private ArrayList<SpaceShip> SpaceShips;
-
-    private GraphicsContext gc;
+    private final GraphicsContext gc;
     public MyCanvas(){
         this.gc = this.getGraphicsContext2D();
 
         // Setting the dimensions
         this.setWidth(canvasWidth);
         this.setHeight(canvasHeight);
+//        this.setStyle("-fx-background-image: url('assets/space-bg.jpg'); -fx-background-size: cover;");
 
         // Making the space background
         gc.setFill(Color.LIGHTGRAY);
@@ -34,12 +32,12 @@ public class MyCanvas extends Canvas {
 
         // Drawing planets
         for(Planet planet : Planets){
-            Drawer.draw(planet);
+            planet.accept(Drawer, gc);
         }
 
         // Drawing spaceships
         for(SpaceShip spaceShip: SpaceShips){
-            Drawer.draw(spaceShip);
+            spaceShip.accept(Drawer, gc);
         }
     }
 }

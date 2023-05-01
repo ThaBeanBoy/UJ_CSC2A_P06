@@ -3,6 +3,7 @@ package acsse.csc2a.model;
 import acsse.csc2a.gui.IDrawVisitor;
 import acsse.csc2a.gui.IDrawable;
 import javafx.geometry.Point2D;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Planet implements IDrawable {
@@ -27,7 +28,7 @@ public class Planet implements IDrawable {
     public int getRadius(){return this.radius;}
 
     @Override
-    public void accept(IDrawVisitor visitor) {
-        visitor.draw(this);
+    public void accept(IDrawVisitor visitor, GraphicsContext gc) {
+        visitor.draw(this, gc);
     }
 }

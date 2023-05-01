@@ -3,8 +3,10 @@ package acsse.csc2a.gui;
 import acsse.csc2a.model.Planet;
 import acsse.csc2a.model.SpaceShip;
 import javafx.geometry.Pos;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.control.MenuBar;
 
@@ -16,10 +18,11 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class MyPane extends StackPane {
-    private ArrayList<Planet> Planets;
-    private ArrayList<SpaceShip> SpaceShips;
+    private ArrayList<Planet> Planets = new ArrayList<>();
+    private ArrayList<SpaceShip> SpaceShips = new ArrayList<>();
 
     private final MenuBar menuBar;
+    private final MyCanvas CanvasDisplay;
 
     public MyPane(){
         final Menu fileMenu = new Menu("File");
@@ -30,22 +33,32 @@ public class MyPane extends StackPane {
         menuBar = new MenuBar(fileMenu);
         setAlignment(menuBar, Pos.TOP_LEFT);
 
+        // Making the canvas
+        this.CanvasDisplay = new MyCanvas();
+        setAlignment(this.CanvasDisplay, Pos.BOTTOM_LEFT);
+
         // Adding menu items to file menu
         fileMenu.getItems().add(PlanetMenuItem);
         fileMenu.getItems().add(SpaceShipsMenuItem);
 
         // Binding event listener to open planets' file
-        PlanetMenuItem.setOnAction(e-> this.Planets = FileIO.readPlanet(new File("data/planets.txt")));
+        PlanetMenuItem.setOnAction(e-> {
+            this.Planets = FileIO.readPlanet(new File("data/planets.txt"));
+            this.CanvasDisplay.repaintCanvas(this.SpaceShips, this.Planets);
+        });
 
         // Binding event listener to open spaceships' file
-        SpaceShipsMenuItem.setOnAction(e-> this.SpaceShips = FileIO.readSpaceShip(new File("data/spaceships.txt")));
+        SpaceShipsMenuItem.setOnAction(e-> {
+            this.SpaceShips = FileIO.readSpaceShip(new File("data/spaceships.txt"));
+            this.CanvasDisplay.repaintCanvas(this.SpaceShips, this.Planets);
+        });
 
-        // Making the canvas
-        final MyCanvas Canvas = new MyCanvas();
-        setAlignment(Canvas, Pos.BOTTOM_LEFT);
         // Pane
-        this.getChildren().addAll(Canvas, menuBar);
-        this.setWidth(Canvas.getWidth());
+//        Pane cnv = new Pane(this.CanvasDisplay);
+//        cnv.setStyle("-fx-background-image: url('assets/space-bg.jpg'); -fx-background-size: cover;");
+
+        this.getChildren().addAll(this.CanvasDisplay, menuBar);
+        this.setWidth(this.CanvasDisplay.getWidth());
         this.setHeight(menuBar.getHeight() + MyCanvas.canvasHeight);
     }
 }
