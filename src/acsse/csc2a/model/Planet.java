@@ -1,0 +1,26 @@
+package acsse.csc2a.model;
+
+import javafx.geometry.Point2D;
+import javafx.scene.paint.Color;
+
+public class Planet {
+    private final String name;
+    private final Point2D planetPosition;
+    private final Color planetColor;
+    private final int radius;
+
+    public Planet(String name, double x_position, double y_position, Color color, int radius) {
+        this.name = name;
+        this.planetPosition = new Point2D(x_position, y_position);
+        this.planetColor = color;
+        this.radius = radius;
+    }
+
+    public String getName() {return this.name;}
+
+    public Point2D getPlanetPosition(){ return this.planetPosition;}
+
+    public Color getPlanetColor() { return this.planetColor;}
+
+    public int getRadius(){return this.radius;}
+}
