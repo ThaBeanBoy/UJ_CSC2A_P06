@@ -1,3 +1,4 @@
+import acsse.csc2a.gui.MyCanvas;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +17,9 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception{
         MyPane RootNode = new MyPane();
 
-        stage.setScene(new Scene(RootNode, 300, 300));
+        stage.setScene(new Scene(RootNode));
+        stage.setTitle("MWSCB Spaceship Dashboard");
+
         stage.show();
     }
 

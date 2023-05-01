@@ -8,6 +8,8 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.StackPane;
 import javafx.scene.control.MenuBar;
 
+import acsse.csc2a.gui.MyCanvas;
+
 import java.util.ArrayList;
 
 public class MyPane extends StackPane {
@@ -21,7 +23,7 @@ public class MyPane extends StackPane {
         final MenuItem PlanetMenuItem = new MenuItem("Open Planets");
         final MenuItem SpaceShipsMenuItem = new MenuItem("Open Space Ships");
 
-        //Adding file menu to the menu bar
+        // Adding file menu to the menu bar
         menuBar = new MenuBar(fileMenu);
         setAlignment(menuBar, Pos.TOP_LEFT);
 
@@ -32,11 +34,15 @@ public class MyPane extends StackPane {
         // Binding event listener to open planets' file
         PlanetMenuItem.setOnAction(e->{});
 
-        //Binding event listener to open spaceships' file
+        // Binding event listener to open spaceships' file
         SpaceShipsMenuItem.setOnAction(e->{});
 
-        //Pane
-        this.getChildren().add(menuBar);
-        this.setWidth(800);
+        // Making the canvas
+        final MyCanvas Canvas = new MyCanvas();
+        setAlignment(Canvas, Pos.BOTTOM_LEFT);
+        // Pane
+        this.getChildren().addAll(Canvas, menuBar);
+        this.setWidth(Canvas.getWidth());
+        this.setHeight(menuBar.getHeight() + MyCanvas.canvasHeight);
     }
 }
