@@ -5,6 +5,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import acsse.csc2a.gui.MyPane;
+
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -12,7 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
-        stage.setScene(new Scene(createContent(), 300, 300));
+        MyPane RootNode = new MyPane();
+
+        stage.setScene(new Scene(RootNode, 300, 300));
         stage.show();
     }
 

@@ -6,10 +6,10 @@ import javafx.geometry.Point2D;
 public class SpaceShip extends Ship{
     private final Point2D shipPosition;
     /**
-     * Constructor for Ship class
-     *
-     * @param iD   ID of the Ship
-     * @param name Name of the Ship
+     * Constructor for SpaceShip class
+     * @param iD            ID of the Ship
+     * @param name          Name of the Ship
+     * @param x_position    X Coordinate  of the Spaceship
      */
     public SpaceShip(String iD, String name, double x_position, double y_position) {
         super(iD, name);
