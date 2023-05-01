@@ -7,7 +7,17 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+/**
+ * @author TG Chipoyera
+ * @version p06
+ * @see Planet,SpaceShip,GraphicsContext
+ */
 public class DrawVisitor implements  IDrawVisitor{
+    /**
+     * Draws a Planet on the given GraphicsContext
+     * @param planet The planet that is going to be drawn
+     * @param gc The graphics context
+     */
     @Override
     public void draw(Planet planet, GraphicsContext gc) {
         final double x_pos = planet.getPlanetPosition().getX();
@@ -31,6 +41,11 @@ public class DrawVisitor implements  IDrawVisitor{
         gc.fillText(name, midpoints.getX_pos(), midpoints.getY_pos());
     }
 
+    /**
+     * Draws a SpaceShip on the given GraphicsContext
+     * @param spaceship The SpaceShip that is going to be drawn
+     * @param gc The graphics context
+     */
     @Override
     public void draw(SpaceShip spaceship, GraphicsContext gc) {
         final double x_pos = spaceship.getShipPosition().getX();
@@ -49,8 +64,21 @@ public class DrawVisitor implements  IDrawVisitor{
         gc.fillText(name, midpoints.getX_pos(), midpoints.getY_pos());
     }
 
+    /**
+     * @author TG Chipoyera
+     * @version P06
+     */
     private static class TextMidpoint{
         private final double x_pos, y_pos;
+
+        /**
+         * Instantiates a TextMidpoint object
+         * @param x_position The x coordinate of the container's position
+         * @param y_position The y coordinate of the container's position
+         * @param width The width of the container
+         * @param height The height of the container
+         * @param text The text
+         */
         public TextMidpoint(double x_position, double y_position, double width, double height, String text){
             //Getting width & height of text element
             Bounds textBounds = new Text(text).getLayoutBounds();
@@ -62,10 +90,18 @@ public class DrawVisitor implements  IDrawVisitor{
             this.y_pos = y_position + (height/2);
         }
 
+        /**
+         * Returns the x position of the text withing the container
+         * @return double
+         */
         public double getX_pos() {
             return this.x_pos;
         }
 
+        /**
+         * Returns the y position of the text withing the container
+         * @return double
+         */
         public double getY_pos() {
             return this.y_pos;
         }

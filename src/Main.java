@@ -22,8 +22,4 @@ public class Main extends Application {
 
         stage.show();
     }
-
-    private Parent createContent(){
-        return new StackPane(new Text("Hello World"));
-    }
 }

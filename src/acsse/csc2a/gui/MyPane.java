@@ -17,6 +17,11 @@ import acsse.csc2a.file.FileIO;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * @author TG Chipoyera
+ * @version P06
+ * @see Planet,SpaceShip,File
+ */
 public class MyPane extends StackPane {
     private ArrayList<Planet> Planets = new ArrayList<>();
     private ArrayList<SpaceShip> SpaceShips = new ArrayList<>();
@@ -24,6 +29,9 @@ public class MyPane extends StackPane {
     private final MenuBar menuBar;
     private final MyCanvas CanvasDisplay;
 
+    /**
+     * Creates a pane that displays a menubar where planets &/or spaceships can be displayed on a canvas
+     */
     public MyPane(){
         final Menu fileMenu = new Menu("File");
         final MenuItem PlanetMenuItem = new MenuItem("Open Planets");
@@ -52,10 +60,6 @@ public class MyPane extends StackPane {
             this.SpaceShips = FileIO.readSpaceShip(new File("data/spaceships.txt"));
             this.CanvasDisplay.repaintCanvas(this.SpaceShips, this.Planets);
         });
-
-        // Pane
-//        Pane cnv = new Pane(this.CanvasDisplay);
-//        cnv.setStyle("-fx-background-image: url('assets/space-bg.jpg'); -fx-background-size: cover;");
 
         this.getChildren().addAll(this.CanvasDisplay, menuBar);
         this.setWidth(this.CanvasDisplay.getWidth());
