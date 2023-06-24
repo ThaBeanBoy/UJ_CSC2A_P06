@@ -1,10 +1,10 @@
-# UJ CSC2A Practical 4
+# UJ CSC2A Practical 6
 
 ## Table of Content
 
 ## Additional information
 
-This has some similarities with the last practical, but this time, we only dealing with Planets & SpaceShips. 
+This has some similarities with the last practical, but this time, we were only dealing with Planets & SpaceShips. 
 I think this practical had 2 main objectives:
 - Use the Visitor Design Pattern.
 - Work with the canvas & Graphics Context.
@@ -22,6 +22,10 @@ I actually struggle with the inheritance, This time we were inheriting from clas
 ## Visitor Design Pattern & Interfaces
 
 **NB: I am still a student, I still have a limited understanding of design patterns, so my explanation could be bad.**
+
+The Visitor design pattern is a behavioral design pattern with the following definition - "Represent an operation to be
+performed on elements of an object structure. Visitor lets you define a new operation without changing the classes of
+the elements on which it operates" - GO4
 
 This is how I view the visitor design pattern. There are 2 types of objects, the:
 - Visitor
