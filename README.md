@@ -2,6 +2,10 @@
 
 ## Table of Content
 
+## Marks
+
+![Marks](./docs/Marks.png)
+
 ## Additional information
 
 This has some similarities with the last practical, but this time, we were only dealing with Planets & SpaceShips. 
@@ -19,7 +23,7 @@ I actually struggle with the inheritance, This time we were inheriting from clas
 
 ![UML](./docs/UML.png)
 
-## Visitor Design Pattern & Interfaces
+## Visitor Design Pattern
 
 **NB: I am still a student, I still have a limited understanding of design patterns, so my explanation could be bad.**
 
@@ -50,12 +54,34 @@ In this practical, there are 2 types of objects that will be drawn on the canvas
 
 **NB: going through the UML Class diagram & the actual interfaces & classes will give us a better idea.**
 
-### Interfaces & Classes
+### Visitor Design Pattern Participants (Interfaces & Classes)
+
+#### Interfaces
 
 First, we need to make the Visitor interface, which we'll call [IDrawVisitor](./src/acsse/csc2a/gui/IDrawVisitor.java).
-The [IDrawVisitor](./src/acsse/csc2a/gui/IDrawVisitor.java) will have method signatures that implement will implement all
-classes  that need implementation.
+The [IDrawVisitor](./src/acsse/csc2a/gui/IDrawVisitor.java) will have method signatures that will implement all
+classes.
 
 Visitables interface, which will be the [IDrawable](./src/acsse/csc2a/gui/IDrawable.java) 
 interface. The interface has a method signature `accept`, the accept methods accepts a [visitor](./src/acsse/csc2a/gui/IDrawVisitor.java). 
 
+#### Classes
+
+###
+
+## Results
+
+For this practical, there was no need to add a file picker, our program just read the text
+files inside the [docs](./docs) directory.
+
+### Rendering Planets
+
+![Loading Planets](./docs/LoadingPlanets.png)
+
+![Planets rendered](./docs/RenderingPlanets.png)
+
+### Rendering Spaceships
+
+![Loading Spaceships](./docs/LoadingSpaceships.png)
+
+![Spaceships Renders](./docs/RenderingSpaceships.png)
