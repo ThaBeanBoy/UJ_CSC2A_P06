@@ -2,6 +2,16 @@
 
 ## Table of Content
 
+- [Marks](#marks)
+- [Additional information](#additional-information)
+- [UML](#uml)
+- [Visitor Design Pattern](#visitor-design-pattern)
+    * [Visitor Design Pattern Participants (Interfaces & Classes)](#visitor-design-pattern-participants--interfaces---classes-)
+        + [Interfaces](#interfaces)
+- [Results](#results)
+    * [Rendering Planets](#rendering-planets)
+    * [Rendering Spaceships](#rendering-spaceships)
+
 ## Marks
 
 ![Marks](./docs/Marks.png)
@@ -63,11 +73,7 @@ The [IDrawVisitor](./src/acsse/csc2a/gui/IDrawVisitor.java) will have method sig
 classes.
 
 Visitables interface, which will be the [IDrawable](./src/acsse/csc2a/gui/IDrawable.java) 
-interface. The interface has a method signature `accept`, the accept methods accepts a [visitor](./src/acsse/csc2a/gui/IDrawVisitor.java). 
-
-#### Classes
-
-###
+interface. The interface has a method signature `accept`, the accept methods accepts a [visitor](./src/acsse/csc2a/gui/IDrawVisitor.java).
 
 ## Results
 
