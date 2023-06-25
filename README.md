@@ -5,9 +5,14 @@
 - [Marks](#marks)
 - [Additional information](#additional-information)
 - [UML](#uml)
+- [JavaFX Canvas](#javafx-canvas)
+    * [Canvas](#canvas)
+    * [Drawing using the graphics context](#drawing-using-the-graphics-context)
 - [Visitor Design Pattern](#visitor-design-pattern)
     * [Visitor Design Pattern Participants (Interfaces & Classes)](#visitor-design-pattern-participants--interfaces---classes-)
         + [Interfaces](#interfaces)
+        + [Classes](#classes)
+        + [Draw Visitor](#draw-visitor)
 - [Results](#results)
     * [Rendering Planets](#rendering-planets)
     * [Rendering Spaceships](#rendering-spaceships)
@@ -32,6 +37,12 @@ I actually struggle with the inheritance, This time we were inheriting from clas
 & thought of a quick solution on the spot, I am not sure if this is the correct way to design the UML
 
 ![UML](./docs/UML.png)
+
+## JavaFX Canvas
+
+### Canvas
+
+### Drawing using the graphics context
 
 ## Visitor Design Pattern
 
@@ -74,6 +85,10 @@ classes.
 
 Visitables interface, which will be the [IDrawable](./src/acsse/csc2a/gui/IDrawable.java) 
 interface. The interface has a method signature `accept`, the accept methods accepts a [visitor](./src/acsse/csc2a/gui/IDrawVisitor.java).
+
+#### Classes
+
+#### Draw Visitor
 
 ## Results
 
